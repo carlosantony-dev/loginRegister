@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="estilo.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+  <title>title</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+    function back(){
+      window.location.replace("/login");
+    }
+  </script>
+  <main class="container">
+    <h2>Usuários cadastrados:</h2>
+    <ul>
+      <% for(var i=0; i<usuario.length; i++) {%>
+          <li>
+              Nome: <%=usuario[i].nome%>
+          </li>
+          <li>
+              Idade: <%=usuario[i].senha%>
+              <br>
+              <br>
+          </li>
+          <% } %>
+  </ul>
+</main>
+<button class ="myButton" onclick="back()">Voltar Login</button>
+</body>
+</html>
