@@ -1,11 +1,9 @@
 const express = require("express");
-const bodyParser = require('body-parser');
-const { use } = require("express/lib/application");
-const app = express();
+const bodyparser = require("body-parser");
 const cors = require('cors');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 app.use(express.static(__dirname + '/'))
 app.use(cors());
 
