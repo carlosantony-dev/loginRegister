@@ -18,10 +18,10 @@ app.get('/', (req, res) => {
     res.send("AAAA")
 });
 
-app.post('/', (req,res) => {
+/*app.post('/', (req,res) => {
     usuarios.push({nome: req.body.nome, senha: req.body.pass});
     res.redirect("/login");
-})
+})*/
 
 app.get('/login', (req,res) => {
     res.sendFile(__dirname + "/login.html");
