@@ -2,10 +2,12 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const { use } = require("express/lib/application");
 const app = express();
+const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/style'));
+app.use(cors());
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -65,6 +67,5 @@ app.get('/logado', (req,res) => {
 })
 
 
-app.listen(3000, ()=> {
-    console.log('Funciona');
-})
+const port = process.env.PORT || 3000;
+app.listen(port);
