@@ -15,8 +15,7 @@ app.set('views', './views');
 var usuarios = [];
 
 app.get('/', (req, res) => {
-    alert("entrou na principal")
-    res.sendFile(__dirname + "/cadastro.html"); 
+    res.send("AAAA")
 });
 
 app.post('/', (req,res) => {
