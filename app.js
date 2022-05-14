@@ -15,7 +15,7 @@ app.set('views', './views');
 var usuarios = [];
 
 app.get('/', (req, res) => {
-    res.send("AAAA")
+    res.write("TESTE");
 });
 
 /*app.post('/', (req,res) => {
