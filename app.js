@@ -6,7 +6,7 @@ const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/style'));
+app.use(express.static(__dirname + '/'))
 app.use(cors());
 
 app.set('view engine', 'ejs');
@@ -15,16 +15,16 @@ app.set('views', './views');
 var usuarios = [];
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/cadastro.html');
+    res.sendFile(__dirname + "/cadastro.html");
 });
 
 app.post('/', (req,res) => {
     usuarios.push({nome: req.body.nome, senha: req.body.pass});
-    res.redirect('/login')
+    res.redirect("/login");
 })
 
 app.get('/login', (req,res) => {
-    res.sendFile(__dirname + '/login.html');
+    res.sendFile(__dirname + "/login.html");
 })
 
 function validateUser(name,pass,tam){
