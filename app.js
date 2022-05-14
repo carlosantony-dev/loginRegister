@@ -13,7 +13,7 @@ app.set('views', './views');
 var usuarios = [];
 
 app.get('/a', (req, res) => {
-    res.sendFile(__dirname+"/cadastro.html");
+    res.sendFile(__dirname+"/public/cadastro.html");
 });
 
 /*app.post('/', (req,res) => {
@@ -22,7 +22,7 @@ app.get('/a', (req, res) => {
 })*/
 
 app.get('/login', (req,res) => {
-    res.sendFile(__dirname + "/login.html");
+    res.sendFile(__dirname + "/public/login.html");
 })
 
 function validateUser(name,pass,tam){
