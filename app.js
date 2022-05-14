@@ -14,7 +14,7 @@ app.set('views', './views');
 
 var usuarios = [];
 
-app.get('/', (req, res) => {
+app.get('/a', (req, res) => {
     res.sendFile(__dirname+"/cadastro.html");
 });
 
