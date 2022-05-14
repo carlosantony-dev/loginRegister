@@ -4,7 +4,7 @@ const cors = require('cors');
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-app.use(express.static(__dirname + '/'))
+app.use(express.static(__dirname + '/public'))
 app.use(cors());
 
 app.set('view engine', 'ejs');
